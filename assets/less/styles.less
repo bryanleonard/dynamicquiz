@@ -1,0 +1,70 @@
+.container-fluid {
+	> .row {
+		padding-top: 1em;
+		padding-bottom: 3em;
+	}
+
+	h1, h2, h3, h4, h5 {
+		// font-family: 'Oswald', sans-serif;
+		font-family: 'Droid Serif', serif, sans-serif;
+		font-weight: 400;
+	}
+
+	button, .btn:focus, .btn:active:focus, .btn.active:focus {
+		outline: 0;
+		outline-offset: 0; 
+	}
+}
+
+.quiz-items {
+
+	.page-header {
+		margin-top: 1em;
+	}
+
+	.list-plain {
+		list-style: none;
+		padding-left: 1em;
+
+		li {
+			margin-bottom: .5em;
+		}
+	}
+
+	dt {
+		margin-bottom: .75em;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		position: relative;
+		top: -2px;
+		cursor: pointer;
+	}
+
+	label {
+		font-weight: 200;
+		margin: 0 0 0 .5em;
+		cursor: pointer;
+	}
+
+	.btn-wrapper {
+		margin-top: 1.5em;
+	}
+
+	p {
+		margin-bottom: 1.5em;
+	}
+}
+
+.summary-items {
+	p {
+		margin: 0 0 1.5em 1.5em;
+	}
+}
+
+// Utilities/Lib overrides
+.fa-spin {
+	-webkit-animation: fa-spin 1.5s infinite linear;
+	animation: fa-spin 1.5s infinite linear;
+}

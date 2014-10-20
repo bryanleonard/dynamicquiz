@@ -1,0 +1,17 @@
+{{#each this}}
+	<dl id="qNumber{{@index}}" class="questions" data-question="{{@index}}">
+	<dt>{{question}}</dt>
+	<dd>
+		<ul class="list-plain">
+			{{getOuterIndex @index}}
+			{{#each choices}}
+				<li>
+					<input type="radio" name="group{{../outerIndex}}" value="{{this}}" id="qGroup{{../outerIndex}}-{{@index}}"> 
+					<label for="qGroup{{../outerIndex}}-{{@index}}">{{this}}</label>
+				</li>
+			{{/each}}
+		</ul>
+	</dd>
+	</dl>
+{{/each}}
+

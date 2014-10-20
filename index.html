@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dynamic Quiz</title>
+
+	<link href="../../assets/lib/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- <link href="../../assets/lib/bootstrap-3.1.1/css/bootstrap-theme.css" rel="stylesheet" type="text/css"> -->
+	<!-- <link href="../../assets/lib/qunit/qunit-1.14.0.css" rel="stylesheet" type="text/css"> -->
+	<link href="../../assets/lib/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- <link href="http://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet" type="text/css"> -->
+	<link href="http://fonts.googleapis.com/css?family=Droid+Serif:400" rel="stylesheet" type="text/css">
+	<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="container">
+	<div class="container-fluid">
+		
+		<div class="row">
+			<div class="col-xs-12">
+
+				<!-- *************************************** -->
+
+				<div id="quizWrapper" class="hidden">
+					<h3 id="quizHeader" class="page-header">
+						Take the quiz already.
+					</h3>
+
+					<div id="validate" class="hidden">
+						<p class="alert alert-danger">Please provide an answer to the question below.</p>
+					</div>
+
+					<div id="quiz" class="quiz-items"><!-- questions.hbs --></div>
+
+					<hr>
+
+					<div class="row btn-wrapper" id="nextBtnRow">
+
+						<p class="col-xs-12 col-sm-6">
+							<button id="prevBtn" class="btn btn-primary btn-block">
+								<i class="fa fa-fw fa-chevron-left"></i>
+								<span id="btnText" class="btn-text">Previous</span> 
+							</button>
+						</p>
+
+						<p class="col-xs-12 col-sm-6">
+							<button id="nextBtn" class="btn btn-primary btn-block" data-question="0">
+								<span id="btnText" class="btn-text">Next</span> 
+								<i class="fa fa-fw fa-chevron-right"></i>
+							</button>
+						</p>
+					</div>
+				</div>
+
+
+				<!-- *************************************** -->
+
+
+				<div id="summaryWrapper" class="hidden">
+
+					<h3 id="summaryHeader" class="page-header">
+						Here are the results.
+					</h3>
+
+					<div id="quizScore" class="alert alert-info">
+						<p>
+							<b><span id="percentCorrect"></span>%</b>
+							 - You scored <span id="numCorrect"></span> out of <span id="numTotal"></span>.
+						</p>
+					</div>
+					
+					<div id="summary" class="summary-items"><!-- summary.hbs --></div>
+
+					<hr>
+
+					<div class="row">
+						<p class="col-xs-12 col-md-4 col-lg-3">
+							<button id="againBtn" class="btn btn-info btn-block">
+								Begin again?
+							</button>
+						</p>
+					</div>
+
+				</div>
+
+
+				<!-- *************************************** -->
+
+
+				<div id="error" class="hidden">
+					<h3 class="page-header">Whoops!</h3>
+					<p>Something went wrong! Please try you call again later.</p>
+				</div>
+
+
+				<!-- *************************************** -->
+			
+
+			</div><!-- /col -->
+		</div><!-- /row -->
+
+	</div><!-- /container-fluid -->
+</div><!-- /container -->
+
+<!--
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery.js"><\/script>')</script>
+-->
+
+<script src="../../assets/lib/jquery-1.11.1.js"></script>
+<!-- <script src="../../assets/lib/jquery-ui-1.10.4/js/jquery-ui-1.10.4.js"></script> -->
+<script src="../../assets/lib/handlebars-2.0.0.js"></script>
+<!-- <script src="../../assets/lib/underscore-1.6.0.js"></script> -->
+<!-- <script src="../../assets/lib/backbone-1.1.2.js"></script>
+<script src="../../assets/lib/backbone.localStorage-1.1.7.js"></script> -->
+<script src="../../assets/lib/bootstrap-3.1.1/js/bootstrap.js"></script>
+<!-- <script src="../../assets/lib/qunit/qunit-1.14.0.js"></script> -->
+<script src="../../assets/utils/utils.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
